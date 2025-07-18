@@ -1,0 +1,251 @@
+<!--
+==========================================================
+TABLE OF CONTENTS
+==========================================================
+1. Navigation         - ID: nhs-header
+2. Home Page          - ID: home
+3. Guides Page        - ID: guides
+4. FAQs Page          - ID: faqs
+5. Catalogue Page     - ID: CC
+6. Stat & Mand Page   - ID: SaMT
+7. Non-Stat & Mand    - ID: NSaMT
+8. EPR Training       - ID: EPR
+9. Support            - ID: SUP
+10. 
+==========================================================
+-->
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NHSBSA Welcome Hub</title>
+</head>
+
+<body>
+  <!-- ======================================================
+=                     NAVIGATION SECTION                  =
+========================================================= -->
+  <header class="nhs-header">
+    <div class="logo-bar d-flex align-items-center py-2 px-3">
+
+      <div class="logo-container d-flex align-items-center gap-2">
+        <img src="https://assets.codepen.io/8889025/BSA_Veterans.png" class="logo esr" />
+        <img src="https://assets.codepen.io/8889025/BSA_App0.png" class="logo nhs" />
+      </div>
+      <h1>HM Forces Veterans</h1>
+    </div>
+    <div class="container">
+      <div class="row">
+        <!--<div class="banner-wrapper">
+          <img src="https://assets.codepen.io/8889025/MY-Logo-Banner.png" class="Banner_image" alt="Welcome Hub Banner">
+          <div class="banner-text-overlay">
+            <h1>Mid Yorkshire Teaching NHS Trust</h1>
+          </div>
+        </div>-->
+        <nav class="navbar navbar-expand-lg">
+          <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+              <span class="navbar-toggler-icon">
+            </button>
+            <div class="collapse navbar-collapse" id="navMenu">
+
+              <ul class="navbar-nav mx-auto">
+                <li class="nav-item"><a class="nav-link" onclick="showPage('home')">Home</a></li>
+                <li class="nav-item"><a class="nav-link" onclick="showPage('Vet_AFN')">Armed Forces Network</a></li>
+                <li class="nav-item"><a class="nav-link" onclick="showPage('Vet_VG')">Veterans Gateway</a></li>
+                <li class="nav-item"><a class="nav-link" onclick="showPage('Vet_Status')">Recording Veteran Status in ESR</a></li>
+                <li class="nav-item"><a class="nav-link" onclick="showPage('Vet_Policy')">Armed Forces Reservist Policy</a></li>
+                <li class="nav-item"><a class="nav-link" onclick="showPage('Vet_AFC')">Armed Forces Covenant and Employee Recognition Scheme</a></li>
+
+              </ul>
+              </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+        <!-- Combined Toolbar and Search -->
+        <div class="container mt-3">
+          <div class="row align-items-center g-2">
+            <!-- Search Bar (left, stretches as needed) -->
+            <div class="col">
+              <input type="text" id="searchInput" class="form-control" placeholder="Search the site" onkeyup="searchPages()">
+            </div>
+            <!-- Control Panel (right, auto-width) -->
+            <div class="col-auto">
+              <div class="d-flex flex-wrap align-items-center gap-2 control-toolbar p-2 rounded">
+                <!-- Theme Selector -->
+                <label for="themeSelector" class="visually-hidden">Choose Theme</label>
+                <select id="themeSelector" class="form-select form-select-sm w-auto">
+                  <option value="blue">💙 NHS Blue</option>
+                  <option value="green">💚 NHS Green</option>
+                  <option value="grey">🩶 NHS Grey</option>
+                  <option value="pink">💗 NHS Pink</option>
+                  <option value="purple">💜 NHS Purple</option>
+                  <option value="red">❤️ NHS Red</option>
+                  <option value="yellow">💛 NHS Yellow</option>
+                  <option value="calm">🌫 Calm Grey</option>
+                  <option value="contrast">⚠️ High Contrast</option>
+                </select>
+                <!-- Text Scaling -->
+                <div class="btn-group btn-group-sm" role="group" aria-label="Text Size">
+                  <button onclick="setTextSize('scale-small')" class="btn btn-outline-secondary">A–</button>
+                  <button onclick="setTextSize('scale-medium')" class="btn btn-outline-secondary">A</button>
+                  <button onclick="setTextSize('scale-large')" class="btn btn-outline-secondary">A+</button>
+                  <button onclick="setTextSize('scale-xlarge')" class="btn btn-outline-secondary">A++</button>
+                </div>
+                <!-- Dark Mode -->
+                <button id="toggleDark" class="btn btn-sm btn-outline-primary">
+                  🌙 Dark Mode
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+  </header>
+  <!--<div class="banner-wrapper">
+    <img src="https://assets.codepen.io/8889025/MY-Logo-Banner.png" class="Banner_image" alt="Welcome Hub Banner">
+    <div class="banner-text-overlay">
+      <h2>Learning and Development Hub</h2>
+    </div>
+  </div> -->
+  <!-- ======================================================
+=                     HOME PAGE SECTION                   =
+========================================================= -->
+  <div id="home" class="page active">
+    <div class="container">
+      <!--Alternate placng for banner-wrapper -->
+      <div class="row">
+        <div class="col-md-4 gradient-col d-flex align-items-center justify-content-center">
+          <h3 class="gradient-text">HM Forces Veterans</h3>
+        </div>
+        <div class="col-md-8 text-start">
+          <p>As part of the NHS family, we recognise the invaluable skills and experiences that you, our colleagues who are HM Forces Veterans, bring to our organisation.</p>
+          <p>In this section of ESR you will find link and resources to support our Veterans colleagus and their families.</p>
+
+          <button type="button" class="btn btn-block btn-primary" onclick="showPage('Vet_AFN');">Armed Forces Network</button>
+          <button type="button" class="btn btn-block btn-primary" onclick="showPage('Vet_VG');">Veterans Gateway</button>
+          <button type="button" class="btn btn-block btn-primary" onclick="showPage('Vet_Status');">Recording Veteran Status in ESR</button>
+          <button type="button" class="btn btn-block btn-primary" onclick="showPage('Vet_Policy');">Armed Forces Reservist Policy</button>
+          <button type="button" class="btn btn-block btn-primary" onclick="showPage('Vet_AFD');" data-visible-from="01-01" data-visible-to="07-05">Armed Forces Day 29th June 2024</button>
+          <button type="button" class="btn btn-block btn-primary" onclick="showPage('Vet_AFC');">Armed Forces Covenant and Employee Recognition Scheme</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ======================================================
+=                     Armed Forces Network SECTION                 =
+========================================================= -->
+  <div id="Vet_AFN" class="page">
+    <div class="container">
+      <!--Alternate placng for banner-wrapper -->
+      <div class="row">
+        <div class="col-md-4 gradient-col d-flex align-items-center justify-content-center">
+          <h3 class="gradient-text">Armed Forces Network</h3>
+        </div>
+        <div class="col-md-8 text-start">
+          <p>The NHSBSA's Armed Forces Community of Practice (CoP) is a non-exclusive group that is open to all employees and has a mix of armed forces veterans, those who have a general interest in the armed forces, reservist, cadet volunteers and those with a family member who once served or is still serving.</p>
+
+          <p>It provides a place for the Armed Forces Community to come together and share ideas and best practice, supporting each other to make the NHSBSA a great place to work.</p>
+
+          <p>More information about the Armed Forces Network can be found on My Hub.</p>
+
+          <a href="https://nhsbsauk.sharepoint.com/sites/People/SitePages/Armed-Forces-Network.aspx" target="_blank" class="btn btn-primary btn-block" role="button">Armed Forces Network</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <!-- ======================================================
+=                     Veteran's Gateway SECTION                   =
+========================================================= -->
+  <div id="Vet_VG" class="page">
+    <div class="container">
+      <!--Alternate placng for banner-wrapper -->
+      <div class="row">
+        <div class="col-md-4 gradient-col d-flex align-items-center justify-content-center">
+          <h3 class="gradient-text">Veteran's Gateway</h3>
+        </div>
+
+        <div class="col-md-8 text-start">
+          <p>The Veterans’ Gateway service is the first point of contact for all Tri-Service veterans, and their families. Its expert content covers welfare areas: housing, employment, finances, living independently, mental wellbeing, families and communities, and physical health.</p>
+          <p>Its unique support (both in the UK and abroad) is funded by the Armed Forces Covenant. And supported by charities and organisations and individuals, including the the National Health Service (NHS), the Government of the United Kingdom (GOV.UK) and the Ministry of Defence (MOD).</p>
+          <a href="https://www.veteransgateway.org.uk/" target="_blank" class="btn btn-primary btn-block" role="button">Veterans' Gateway</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <!-- ======================================================
+=                    Recording Veteran Status in ESR SECTION                   =
+========================================================= -->
+  <div id="Vet_Status" class="page">
+    <div class="container">
+      <!--Alternate placng for banner-wrapper -->
+      <div class="row">
+        <div class="col-md-4 gradient-col d-flex align-items-center justify-content-center">
+          <h3 class="gradient-text">Recording Veteran Status in ESR</h3>
+        </div>
+
+        <div class="col-md-8 text-start">
+          <p>In order for us to provide the support you need where necessary, we would appreciate it if you take the time to record your Veterans status on the Wellbeing Form.</p>
+          <p>This also applies to Armed Forces Family Members, Armed Forces Reservists and Cadet Armed Forces Volunteers.</p>
+          <p>Click the button below to return to ESR, open the Personal Information porlet, click update information and select the Wellbeing tab</p>
+          <a href="https://my.esr.nhs.uk/dashboard/c/portal/login?nav=ESS_LRpersonalinfo
+" target="_blank" class="btn btn-primary btn-block" role="button">Defence Employer Recognition Scheme</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <!-- ======================================================
+=            Armed Forces Reservist Policy PAGE          =
+========================================================= -->
+  <div id="Vet_Policy" class="page">
+    <div class="container">
+      <!--Alternate placng for banner-wrapper -->
+      <div class="row">
+        <div class="col-md-4 gradient-col d-flex align-items-center justify-content-center">
+          <h3 class="gradient-text">Armed Forces Reservist Policy</h3>
+        </div>
+
+        <div class="col-md-8 text-start">
+          <p>This policy is provided so that Trust employees that are members of the Armed Forces Reserves or any staff that want to become a reservist are supported to do so.</p>
+          <ul>
+            <li>This policy ensures that staff are supported to carry out reservist duties.
+            <li>Managers are equipped to support requests from staff to join reserve forces and support staff where possible during the mobilisation period.
+            <li>Ensure that employees are treated fairly and consistently
+          </ul>
+          <iframe class="VetIframe" src="https://assets.codepen.io/8889025/Reserve_and_Cadet_Forces_Training_and_Mobilisation_Policy.pdf"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ======================================================
+=         Armed Forces Covenant and Employee Recognition Scheme PAGE         =
+========================================================= -->
+  <div id="Vet_AFC" class="page">
+    <div class="container">
+      <!--Alternate placng for banner-wrapper -->
+      <div class="row">
+        <div class="col-md-4 gradient-col d-flex align-items-center justify-content-center">
+          <h3 class="gradient-text">Armed Forces Covenant and Employee Recognition Scheme</h3>
+        </div>
+        <div class="col-md-8 text-start">
+          <p>The Armed Forces Covenant is a promise from the nation that those who serve or have served in the armed forces, and their families, are treated fairly.</p>
+
+          <a href="https://www.gov.uk/government/collections/armed-forces-covenant-supporting-information" target="_blank" class="btn btn-primary btn-block" role="button">Armed Forces Covenant: guidance and support</a>
+          <p></p>
+
+          <p>The Defence Employer Recognition Scheme (ERS) encourages employers to support defence and inspire others to do the same. The scheme encompasses Bronze, Silver and Gold awards for employer organisations that pledge, demonstrate or advocate support to defence and the armed forces community, and align their values with the Armed Forces Covenant.</p>
+          <a href="https://www.gov.uk/government/publications/defence-employer-recognition-scheme" target="_blank" class="btn btn-primary btn-block" role="button">Defence Employer Recognition Scheme</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
